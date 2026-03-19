@@ -5,7 +5,7 @@
 [versions]
 java = "17" # must be an integer
 
-kotlin = "1.9.22"
+kotlin = "1.9.24"
 kotlin-fabric = "1.10.20+kotlin.1.9.24"
 kotlin-forge = "4.10.0"
 

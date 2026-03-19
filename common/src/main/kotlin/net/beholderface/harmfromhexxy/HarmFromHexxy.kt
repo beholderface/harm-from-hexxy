@@ -25,6 +25,7 @@ object HarmFromHexxy {
         HarmFromHexxyItemRegistry.init()
         HarmFromHexxyNetworking.init()
         CastEnvComponents.init()
+        LOGGER.info("Hexxy watches.")
     }
 
     fun initServer() {

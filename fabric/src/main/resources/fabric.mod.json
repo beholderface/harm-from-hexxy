@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "harm_from_hexxy",
+  "version": "${version}",
+  "name": "Harm from Hexxy",
+  "description": "Have you ever wanted Hexxy to beat you to death?",
+  "authors": [
+    "beholderface"
+  ],
+  "contact": {
+    "homepage": "https://beholderface.github.io/harm-from-hexxy",
+    "sources": "https://github.com/beholderface/harm-from-hexxy"
+  },
+  "license": "MIT",
+  "icon": "assets/harm_from_hexxy/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [{
+      "adapter": "kotlin",
+      "value": "net.beholderface.harmfromhexxy.fabric.FabricHarmFromHexxy"
+    }],
+    "client": [{
+      "adapter": "kotlin",
+      "value": "net.beholderface.harmfromhexxy.fabric.FabricHarmFromHexxyClient"
+    }],
+    "server": [{
+      "adapter": "kotlin",
+      "value": "net.beholderface.harmfromhexxy.fabric.FabricHarmFromHexxyServer"
+    }],
+    "fabric-datagen": [{
+      "adapter": "kotlin",
+      "value": "net.beholderface.harmfromhexxy.fabric.datagen.FabricHarmFromHexxyDatagen"
+    }],
+    "modmenu": [{
+      "adapter": "kotlin",
+      "value": "net.beholderface.harmfromhexxy.fabric.FabricHarmFromHexxyModMenu"
+    }]
+  },
+  "mixins": [
+    "harm_from_hexxy-common.mixins.json",
+    "harm_from_hexxy-fabric.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "${versions.minecraft}",
+    "fabricloader": ">=${versions.fabric_loader}",
+    "fabric-api": ">=${versions.fabric_api}",
+    "fabric-language-kotlin": ">=${versions.kotlin_fabric}",
+    "architectury": ">=${versions.architectury}",
+    "hexcasting": ">=${versions.hexcasting}",
+    "cloth-config": ">=${versions.clothConfig}"
+  },
+  "suggests": {
+    "modmenu": ">=${versions.modMenu}"
+  }
+}

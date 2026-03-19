@@ -1,0 +1,21 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+# https://copier.readthedocs.io/en/stable/updating/#never-change-the-answers-file-manually
+_commit: v2.2.4
+_src_path: gh:FallingColors/hexdummy
+advanced: true
+capitalize_platforms: false
+classname: HarmFromHexxy
+default_branch: main
+description: Have you ever wanted Hexxy to beat you to death?
+display_name: Harm from Hexxy
+github_repo: harm-from-hexxy
+github_user: beholderface
+homepage_url: https://beholderface.github.io/harm-from-hexxy
+java_package: net.beholderface.harmfromhexxy
+kotlin_package: net.beholderface.harmfromhexxy
+mappings_name: Mojmap
+minecraft_version_in_mod_version: true
+mit_license: true
+mod_version: 0.1.0
+modid: harm_from_hexxy
+sources_url: https://github.com/beholderface/harm-from-hexxy

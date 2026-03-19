@@ -1,0 +1,54 @@
+modid = "harm_from_hexxy"
+book = "hexcasting:thehexbook"
+
+resource_dirs = [  # top takes priority
+    "resources",
+    "{$_common.src}/main/resources",
+    { path="{$_common.src}/generated/resources", required=false },
+    "{$_fabric.src}/main/resources",
+    { path="{$_fabric.src}/generated/resources", required=false },
+    "{$_forge.src}/main/resources",
+    { path="{$_forge.src}/generated/resources", required=false },
+    { modid="hexcasting" },
+    { modid="minecraft" },
+    { modid="hexdoc" },
+]
+export_dir = "src/hexdoc_harm_from_hexxy/_export/generated"
+
+[template]
+icon = "{$_common.src}/main/resources/assets/harm_from_hexxy/icon.png"
+include = [
+    "harm_from_hexxy",
+    "hexcasting",
+    "hexdoc",
+]
+
+[template.args]
+mod_name = "Harm from Hexxy"
+author = "beholderface"
+show_landing_text = false
+
+[extra.hexcasting]
+# NOTE: "!Raw" means "don't apply variable interpolation to this value"
+_pattern_regex = { "!Raw"='make\("(?P<name>[^"]+)",\s*HexDir\.(?P<startdir>\w+),\s*"(?P<signature>[qweasd]+)"' }
+
+[[extra.hexcasting.pattern_stubs]]
+path = "{$_common.kotlin}/registry/HarmFromHexxyActions.kt"
+regex = "{^_pattern_regex}"
+
+# platforms
+
+[_common]
+src = "../common/src"
+java = "{src}/main/java/net/beholderface/harmfromhexxy"
+kotlin = "{src}/main/kotlin/net/beholderface/harmfromhexxy"
+
+[_fabric]
+src = "../fabric/src"
+java = "{src}/main/java/net/beholderface/harmfromhexxy/fabric"
+kotlin = "{src}/main/kotlin/net/beholderface/harmfromhexxy/fabric"
+
+[_forge]
+src = "../forge/src"
+java = "{src}/main/java/net/beholderface/harmfromhexxy/forge"
+kotlin = "{src}/main/kotlin/net/beholderface/harmfromhexxy/forge"

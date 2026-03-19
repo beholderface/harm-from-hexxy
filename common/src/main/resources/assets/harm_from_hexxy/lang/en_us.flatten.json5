@@ -1,0 +1,13 @@
+{
+  harm_from_hexxy: {
+    hexxy_spawn_message: {
+      default: "<Hexxy> We are going to beat you to death.",
+      helpful: "[deaqq:We are going to beat you to death.]"
+    }
+  },
+  item: {
+    harm_from_hexxy: {
+      hexxy_mask: "Hexxy Mask"
+    }
+  }
+}

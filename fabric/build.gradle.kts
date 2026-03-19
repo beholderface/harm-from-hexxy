@@ -19,10 +19,6 @@ loom {
     runs {
         named("datagen") {
             property("harm_from_hexxy.apply-datagen-mixin", "true")
-            programArgs(
-                "--username", "beholderface",
-                "--uuid", "21df30f7-6652-4f02-9b70-f95c1f051c9f"
-            )
         }
     }
 }

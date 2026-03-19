@@ -33,9 +33,7 @@ loom {
                     "--output", outputProject.file("src/generated/resources").absolutePath,
                     "--existing", file("src/main/resources").absolutePath,
                     "--existing", project(":common").file("src/main/resources").absolutePath,
-                    "--existing-mod", "hexcasting",
-                    "--username", "beholderface",
-                    "--uuid", "21df30f7-6652-4f02-9b70-f95c1f051c9f"
+                    "--existing-mod", "hexcasting"
                 )
                 property("harm_from_hexxy.apply-datagen-mixin", "true")
                 property("harm_from_hexxy.$platform-datagen", "true")

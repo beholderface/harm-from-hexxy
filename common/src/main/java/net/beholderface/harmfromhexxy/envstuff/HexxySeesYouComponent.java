@@ -1,9 +1,6 @@
 package net.beholderface.harmfromhexxy.envstuff;
 
-import at.petrak.hexcasting.api.casting.eval.CastResult;
-import at.petrak.hexcasting.api.casting.eval.CastingEnvironment;
-import at.petrak.hexcasting.api.casting.eval.CastingEnvironmentComponent;
-import at.petrak.hexcasting.api.casting.eval.ResolvedPatternType;
+import at.petrak.hexcasting.api.casting.eval.*;
 import at.petrak.hexcasting.api.casting.iota.PatternIota;
 import net.beholderface.harmfromhexxy.HarmFromHexxyItemRegistry;
 import net.minecraft.nbt.CompoundTag;
@@ -17,7 +14,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.monster.Skeleton;
-import net.minecraft.world.item.Items;
 
 import java.util.UUID;
 
@@ -43,7 +39,7 @@ public class HexxySeesYouComponent implements CastingEnvironmentComponent.PostEx
                 String anglesig = pattern.getPattern().anglesSignature();
                 boolean escaped = latest.getEscaped();
                 //HarmFromHexxy.LOGGER.info("{} pattern: {} {}", escaped ? "Escaped" : "Unescaped", pattern.getPattern().getStartDir().toString(), anglesig);
-                if (escaped && result.getResolutionType() == ResolvedPatternType.ESCAPED && anglesig.equals("qqqaw")){
+                if (escaped && result.getResolutionType() == ResolvedPatternType.ESCAPED && anglesig.equals(SpecialPatterns.CONSIDERATION.anglesSignature())){
                     //HarmFromHexxy.LOGGER.info("weewooweewoo");
                     ServerPlayer caster = environment.getCaster();
                     if (caster != null){

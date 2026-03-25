@@ -19,9 +19,9 @@ val release = System.getenv("RELEASE") == "true"
 group = mavenGroup
 
 version = "$modVersion+$minecraftVersion"
-if (!release) {
+/*if (!release) {
     version = "$version-SNAPSHOT"
-}
+}*/
 
 repositories {
     mavenCentral()
